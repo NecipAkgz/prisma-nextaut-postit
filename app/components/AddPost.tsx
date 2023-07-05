@@ -8,12 +8,11 @@ export default function AddPost() {
   const [title, setTitle] = useState('')
   const [isDisabled, setIsDisabled] = useState(false)
 
-  const { mutate } = useMutation({
+  const { mutate: addPost } = useMutation({
     mutationFn: async (title: string) =>
       await axios.post('/api/posts/addPost', { title }),
     onError: (error) => {
       setIsDisabled(false)
-      console.log(error)
     },
     onSuccess: (data) => {
       setTitle('')
@@ -24,7 +23,7 @@ export default function AddPost() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsDisabled(true)
-    mutate(title)
+    addPost(title)
   }
 
   return (
