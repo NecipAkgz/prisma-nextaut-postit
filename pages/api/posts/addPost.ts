@@ -36,7 +36,6 @@ export default async function handler(
           userId: prismaUser?.id!,
         },
       })
-      console.log('🚀 ~ file: addPost.ts:38 ~ result:', result)
       res.status(200).json({ message: 'Post created' })
     } catch (error) {
       res.status(403).json({ message: 'Error has eccured while making post' })

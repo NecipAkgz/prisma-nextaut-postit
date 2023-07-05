@@ -17,8 +17,6 @@ export default function AddPost() {
       if (error instanceof AxiosError) {
         toast.error(error?.response?.data.message, { id: toastID })
       }
-      console.log(`Check toastID: ${toastID}`)
-
       setIsDisabled(false)
     },
     onSuccess: (data) => {
