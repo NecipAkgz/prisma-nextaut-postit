@@ -14,11 +14,11 @@ export const metadata = {
   description: 'Post it if you can',
 }
 
-export default function RootLayout({
-  children,
-}: {
+type Props = {
   children: React.ReactNode
-}) {
+}
+
+export default function RootLayout({ children }: Props) {
   return (
     <html>
       <body
