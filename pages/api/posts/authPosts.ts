@@ -7,11 +7,11 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method === 'GET') {
-    //@ts-ignore
-    const session = await getServerSession(req, res, authOptions)
-    if (!session) return res.status(401).json({ message: 'Please sign in' })
+  //@ts-ignore
+  const session = await getServerSession(req, res, authOptions)
+  if (!session) return res.status(401).json({ message: 'Please sign in' })
 
+  if (req.method === 'GET') {
     // Get Auth Users Post
     try {
       const data = await prisma.user.findUnique({
@@ -19,19 +19,21 @@ export default async function handler(
           email: session.user?.email!,
         },
         include: {
-          Post: {
+          post: {
             orderBy: {
               createdAt: 'desc',
             },
             include: {
-              Comment: true,
+              comment: true,
             },
           },
         },
       })
       res.status(200).json(data)
     } catch (error) {
-      res.status(403).json({ message: 'Error has eccured while making post' })
+      res.status(403).json({
+        message: 'Error has eccured while getting post',
+      })
     }
   }
 }

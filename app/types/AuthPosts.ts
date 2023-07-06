@@ -3,11 +3,11 @@ export type AuthPosts = {
   email: string
   image: string
   name: string
-  posts: {
+  post: {
     id: string
     createdAt: string
     title: string
-    comments?: {
+    comment?: {
       id: string
       createdAt: string
       postId: string
