@@ -6,10 +6,10 @@ Check out the live demo of the project at [Demo Site URL](https://prisma-nextaut
 
 ### Used Stack
 
-- Next.js
-- Prisma
-- NextAuth
-- TanStack React Query
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![Prisma](https://img.shields.io/badge/Prisma-1B222D?style=for-the-badge&logo=prisma&logoColor=white)](https://www.prisma.io/)
+[![NextAuth](https://img.shields.io/badge/NextAuth-1F2937?style=for-the-badge&logo=next.js&logoColor=white)](https://next-auth.js.org/)
+[![TanStack React Query](https://img.shields.io/badge/TanStack%20React%20Query-FF4154?style=for-the-badge&logo=react&logoColor=white)](https://react-query.tanstack.com/)
 
 ### Scripts
 
