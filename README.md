@@ -2,7 +2,7 @@
 
 ### Demo Site
 
-Check out the live demo of the project at [Demo Site URL](https://prisma-nextauth-postit.vercel.app/).
+Check out the live demo of the project at [Demo Site URL](https://prisma-nextaut-postit.vercel.app/).
 
 ### Used Stack
 
