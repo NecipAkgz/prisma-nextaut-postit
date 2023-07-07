@@ -5,6 +5,7 @@ import Logged from './Logged'
 import Login from './Login'
 
 export default async function Nav() {
+  //@ts-ignore
   const session = await getServerSession(authOptions)
 
   return (
